@@ -8,6 +8,7 @@ import vn.truongngo.base.cdc.router.core.model.event.CdcEventContext;
  * Giao diện để định tuyến các sự kiện CDC đến các sink phù hợp.
  */
 public interface CdcRouter {
+
     /**
      * Routes the given event to configured sinks.
      * <p>
