@@ -1,0 +1,40 @@
+[
+    {
+        "connectorName": "mysql-source-app",
+        "enabled": true,
+        "sourceProperties": {
+            "connector.type": "mysql",
+            "database.hostname": "localhost",
+            "database.port": "3306",
+            "database.user": "root",
+            "database.password": "123456",
+            "database.server.id": "55001",
+            "topic.prefix": "src_app",
+            "database.include.list": "cdc-sample",
+            "table.include.list": "cdc-sample.notes",
+            "schema.history.internal.kafka.bootstrap.servers": "localhost:9092",
+            "schema.history.internal.kafka.topic": "schema-history.source_app",
+            "bootstrap.servers": "localhost:9092"
+        },
+        "sinks": {
+            "cdc-sample.notes": [
+                {
+                    "name": "push-notes-to-kafka",
+                    "type": "kafka",
+                    "condition": "",
+                    "properties": {
+                        "topic": "cdc.events.notes"
+                    }
+                },
+                {
+                    "name": "console-log",
+                    "type": "console",
+                    "condition": "",
+                    "properties": {
+                        "level": "DEBUG"
+                    }
+                }
+            ]
+        }
+    }
+]
