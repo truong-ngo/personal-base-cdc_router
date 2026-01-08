@@ -4,6 +4,8 @@
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green)
 ![Debezium](https://img.shields.io/badge/Debezium-Embedded-blue)
 
+**Repository:** [https://github.com/truong-ngo/personal-base-cdc_router](https://github.com/truong-ngo/personal-base-cdc_router)
+
 **CDC Router** là một hệ thống Change Data Capture (CDC) nhẹ, hiệu năng cao, được xây dựng dựa trên Debezium Embedded. Hệ thống này bắt các thay đổi dữ liệu (row-level changes) từ cơ sở dữ liệu nguồn (MySQL) và định tuyến chúng đến nhiều đích khác nhau (Sinks) dựa trên các quy tắc cấu hình linh hoạt.
 
 ## 🚀 Tính Năng Chính
